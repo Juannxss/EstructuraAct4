@@ -1,20 +1,18 @@
-
-
 package com.mycompany.estructuraact4;
+
 import java.util.*;
 import javax.swing.JOptionPane;
-
-
 
 public class EstructuraAct4 {
 
     public static void main(String[] args) {
-        
+
         /*  1. crear un diccionario para guardarel número de documento de Cédula
         y muestre el nombre de la persona para la inscripción de un torneo de fútbol*/
-        
-        JOptionPane.showMessageDialog(null, "Primer ejemplo clase Dictionary");
-        
+        JOptionPane.showMessageDialog(null, "Primer ejemplo clase Dictionary \n"
+                + "crear un diccionario para guardarel número de documento de Cédula\n"
+                + "y muestre el nombre de la persona para la inscripción de un torneo de fútbol");
+
         Dictionary<String, String> diccionario = new Hashtable();//Se crea el diccionario
         //Se agregan los jugadores 
         diccionario.put("1043963744", "Juan Lopez");
@@ -28,33 +26,61 @@ public class EstructuraAct4 {
         diccionario.put("1043349094", "Diego Martinez");
         diccionario.put("1043429094", "Felipe Saruma");
         diccionario.put("1043909434", "Daniel Rojas");
-        
-        JOptionPane.showMessageDialog(null, "La cantidad de jugadores registrados es de: "+diccionario.size()+"\n "
-                + "El capitan del equipo es: "+diccionario.get("1043963744"));
-        
-        
+
+        JOptionPane.showMessageDialog(null, "-La cantidad de jugadores registrados es de: " + diccionario.size() + "\n "
+                + "-El capitan del equipo es: " + diccionario.get("1043963744"));
+
         /* 2. hacer una tabla hash que almacene los nombres de las empresas que hacen lácteos y devuelva su número de teléfono,
         si el nombre elimina la menos conocida*/
-        
-        JOptionPane.showMessageDialog(null, "Segundo ejemplo clase HashTable");
+        JOptionPane.showMessageDialog(null, "Segundo ejemplo clase HashTable\n "
+                + "Hacer una tabla hash que almacene los nombres de las empresas que hacen lácteos y devuelva su número de teléfono,\n"
+                + "elimina a empresa menos conocida");
         Hashtable<String, String> tablaHash = new Hashtable<>();
         tablaHash.put("Colanta", "320898654");
         tablaHash.put("Alpina", "320877796");
         tablaHash.put("Alqueria", "32085456");
         tablaHash.put("La granja del Borrego", "300254432");
-        
-        JOptionPane.showMessageDialog(null, "Estas son las empresas que lideran la industria de los lacteos: "+tablaHash.toString());
-        tablaHash.remove("La granja del Borrego");//elimina la empresa que es la menos reconocida
+
+        JOptionPane.showMessageDialog(null, "Estas son las empresas que lideran la industria de los lacteos: " + tablaHash.toString() + "\n"
+                + "La empresa menos conocida es: " + tablaHash.remove("La granja del Borrego"));//elimina la empresa menos conocida
+
         System.out.println(tablaHash);
-        
+
         JOptionPane.showMessageDialog(null, "Tercer ejemplo clase Property");
-        
+
         Properties propiedad = new Properties();
+
+        JOptionPane.showMessageDialog(null, "Quinto ejemplo clase Vector \n"
+                + "Crear un vector en el cual se puedan guardar tipos de animales,\n" +
+                  "imprimirlos y mostrar cual está en la primara y cual está en la última posición");
+
+        /* Crear un vector en el cual se puedan guardar tipos de animales,
+        imprimirlos y mostrar cual está en la primara y cual está en la última posición. */
+        Vector vectorr = new Vector();
+        //Se agregan los animales
+        vectorr.add("Perro");
+        vectorr.add("Tortuga");
+        vectorr.add("Iguana");
+        vectorr.add("Pollo");
+        vectorr.add("Gato");
+        vectorr.add("Serpiente");
+
+        JOptionPane.showMessageDialog(null, "Los animales son: " + vectorr.toString() + "\n"
+                + "El animal en la primera posicion es: " + vectorr.firstElement()+"\n" //Trae el primer elemento del vector
+                        + "El animal en la ultima posicion es: "+vectorr.lastElement());//Trae el ultimo elemento del vector
         
         
         
         
+        /* Crear un algoritmo para almacenar en orden los
+        colores de la bandera de Colombia, Honduras, Alemania y Canada.*/
+        //Clase enum
         
         
+        
+        
+       
+     
     }
+    
 }
