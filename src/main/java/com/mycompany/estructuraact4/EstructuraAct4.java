@@ -50,9 +50,9 @@ public class EstructuraAct4 {
 
         Properties propiedad = new Properties();
 
-        JOptionPane.showMessageDialog(null, "Quinto ejemplo clase Vector \n"
-                + "Crear un vector en el cual se puedan guardar tipos de animales,\n" +
-                  "imprimirlos y mostrar cual está en la primara y cual está en la última posición");
+        JOptionPane.showMessageDialog(null, "Cuarto ejemplo clase Vector \n"
+                + "Crear un vector en el cual se puedan guardar tipos de animales,\n"
+                + "imprimirlos y mostrar cual está en la primara y cual está en la última posición");
 
         /* Crear un vector en el cual se puedan guardar tipos de animales,
         imprimirlos y mostrar cual está en la primara y cual está en la última posición. */
@@ -66,21 +66,55 @@ public class EstructuraAct4 {
         vectorr.add("Serpiente");
 
         JOptionPane.showMessageDialog(null, "Los animales son: " + vectorr.toString() + "\n"
-                + "El animal en la primera posicion es: " + vectorr.firstElement()+"\n" //Trae el primer elemento del vector
-                        + "El animal en la ultima posicion es: "+vectorr.lastElement());//Trae el ultimo elemento del vector
-        
-        
-        
-        
+                + "El animal en la primera posicion es: " + vectorr.firstElement() + "\n" //Trae el primer elemento del vector
+                + "El animal en la ultima posicion es: " + vectorr.lastElement());//Trae el ultimo elemento del vector
+
         /* Crear un algoritmo para almacenar en orden los
         colores de la bandera de Colombia, Honduras, Alemania y Canada.*/
         //Clase enum
+        JOptionPane.showMessageDialog(null, "Octavo ejemplo clase Arrays \n"
+                + " Crear un Array para almacenar las edades de 15 personas, mostrarlas de menor a mayor "
+                + "e imprimir la edad de 15 si esta se encuentra.");
+
+        int[] arr = {14, 15, 22, 7, 11, 56, 32, 12, 40, 12, 33, 25, 25, 16, 5};//Se crea el arreglo con las edades
+
+        Arrays.sort(arr);//Se llama al metodo sort de la clase Arrays
+
+        JOptionPane.showMessageDialog(null, "Las edades del arreglo son: " + Arrays.toString(arr) + "\n" //devuelve la cadena del arreglo
+                + "El numero 15 esta en la posicion: " + Arrays.binarySearch(arr, 15 + 1)); //devuelve la posicion del numero que se indica
+
+        JOptionPane.showMessageDialog(null, "Decimo ejemplo clase ArrayList\n"
+                + "Crea una algoritmo usando la clase ArrayList para guardar\n"
+                + "una lista de paises que conforman la OTAN, muestra la cantidad de paises");
+
+        ArrayList<String> listaArreglo = new ArrayList<>();
+        listaArreglo.add("BÉLGICA");
+        listaArreglo.add("CANADÁ");
+        listaArreglo.add("DINAMARCA");
+        listaArreglo.add("ESTADOS UNIDOS");
+        listaArreglo.add("FRANCIA");
+        listaArreglo.add("ISLANDIA ");
+        listaArreglo.add("ITALIA");
+        listaArreglo.add("LUXEMBURGO");
+        listaArreglo.add("NORUEGA");
+        listaArreglo.add("PAÍSES BAJOS");
+        listaArreglo.add("PORTUGAL");
+        listaArreglo.add("REINO UNIDO");
+        listaArreglo.add("GRECIA");
+        listaArreglo.add("TURQUÍA");
+        listaArreglo.add("ALEMANIA");
+        listaArreglo.add("España");
+        listaArreglo.add("CHEQUIA");
+        listaArreglo.add("HUNGRÍA");
+        listaArreglo.add("POLONIA");
+        
+        JOptionPane.showMessageDialog(null, "Los paises son: "+listaArreglo+"\n"
+                + "El total de paises que conformaron la OTAN hasta el 2000 fueron: "+listaArreglo.size()+"\n"
+                        + "El pais "+listaArreglo.set(0, "COLOMBIA")+" sera reemplazado por "+listaArreglo.getFirst());
         
         
         
         
-       
-     
     }
-    
+
 }
