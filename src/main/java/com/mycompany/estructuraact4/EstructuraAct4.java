@@ -1,6 +1,5 @@
 package com.mycompany.estructuraact4;
 
-import java.awt.Dimension;
 import java.util.*;
 import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
@@ -9,7 +8,7 @@ public class EstructuraAct4 {
 
     public static void main(String[] args) {
 
-        
+        /*
         JOptionPane.showMessageDialog(null, "Primer ejemplo clase Dictionary \n"
         + "crear un diccionario para guardarel número de documento de Cédula\n"
         + "y muestre el nombre de la persona para la inscripción de un torneo de fútbol");
@@ -44,11 +43,11 @@ public class EstructuraAct4 {
         JOptionPane.showMessageDialog(null, "Estas son las empresas que lideran la industria de los lacteos: " + tablaHash.toString() + "\n"
         + "La empresa menos conocida es: " + tablaHash.remove("La granja del Borrego"));//elimina la empresa menos conocida
         
-        System.out.println(tablaHash);
         
-        JOptionPane.showMessageDialog(null, "Tercer ejemplo clase Property");
         
-        Properties propiedad = new Properties();
+        
+        
+        
         
         JOptionPane.showMessageDialog(null, "Cuarto ejemplo clase Vector \n"
         + "Crear un vector en el cual se puedan guardar tipos de animales,\n"
@@ -169,7 +168,7 @@ public class EstructuraAct4 {
         + "El elemento en la primera posicion es: "+arbolSett.getFirst()+"\n"
         + "El elemento en la ultima posicion es: "+arbolSett.getLast());
         
- 
+        
         
         JOptionPane.showMessageDialog(null, "Decimoséptimo ejemplo Clase HashMap\n"
         + " Crear un algoritmo para guardar el calibre el arma y devuelva el nombre de esta\n "
@@ -189,14 +188,14 @@ public class EstructuraAct4 {
         tablaHashh.put(57, "MOSSBERG 590A1");
         
         JOptionPane.showMessageDialog(null, "Los calibres en mm de las armas son "+tablaHashh.keySet()+" \n"//devuelve un set con las claves
-                + "Todas las armas y sus calibres "+tablaHashh);//Devuelve las claves con sus valores
+        + "Todas las armas y sus calibres "+tablaHashh);//Devuelve las claves con sus valores
         
-      
+        
         
         JOptionPane.showMessageDialog(null, "Decimoctavo ejemplo Clase TreeMap\n"
-                + "Crear una colección a partir de los elementos de la colección anterior \n"
-                + "y agregarle más elementos del mismo contexto, pero de videojuegos.\n"
-                + "Muestra un sub conjunto de estos desde el calibre 40 hasta el mas alto");
+        + "Crear una colección a partir de los elementos de la colección anterior \n"
+        + "y agregarle más elementos del mismo contexto, pero de videojuegos.\n"
+        + "Muestra un sub conjunto de estos desde el calibre 40 hasta el mas alto");
         
         
         TreeMap<Integer,String> mapaArbol = new TreeMap<>(tablaHashh);//se crea el TreeMap
@@ -206,13 +205,13 @@ public class EstructuraAct4 {
         mapaArbol.put(78, "AUG");
         
         JOptionPane.showMessageDialog(null, "El subconjunto es "+mapaArbol.tailMap(40));//Devuleve un arreglo desde la llave 40 hasta la mas alta
-         
+        
         
         JOptionPane.showMessageDialog(null, "Decimonoveno ejemplo Clase LinkedHashMap\n"
         + "Crea un algoritmo que muestre una lista de carros deportivos, los muestre, elimine al carro mas antiguo\n"
-                + "muestre cual es el mas nuevo y muestre una tofo de este");
+        + "muestre cual es el mas nuevo y muestre una tofo de este");
         LinkedHashMap<Integer, String> mapaHashEnlazado = new LinkedHashMap<>();
-
+        
         mapaHashEnlazado.put(1962, "Ferrari 250 GTO");
         mapaHashEnlazado.put(1964, "Ford Mustang GT");
         mapaHashEnlazado.put(1970, "Dodge Challenger");
@@ -223,21 +222,58 @@ public class EstructuraAct4 {
         mapaHashEnlazado.put(2018, "McLaren Senna");
         mapaHashEnlazado.put(2006, "Audi R8");
         
-        //Se crea una imagen como icono y se le da la direccion de la imagen 
+        //Se crea una imagen como icono y se le da la direccion de la imagen
         ImageIcon imagen = new ImageIcon("C:\\Users\\David\\Documents\\DSC03037.jpeg");
         JOptionPane optionnPane = new JOptionPane();//Se crea un objeto JOptionPane
         optionnPane.setIcon(imagen);//Se le asigna la imagen al objeto para que se imprima
-       
+        
         
         JOptionPane.showMessageDialog(null, "Los carros deportivos son: "+mapaHashEnlazado.values()+"\n"//Muestra los carros deportivos
-                +"El carro mas antiguo es el "+mapaHashEnlazado.remove(1962)//elimina el valor asociado a la clave
+        +"El carro mas antiguo es el "+mapaHashEnlazado.remove(1962)//elimina el valor asociado a la clave
         + "\nEl carro deportivo mas nuevo es el "+mapaHashEnlazado.get(2022));//Trae el valor asociado a la clave
         //Muestra una imagen del carro mas nuevo junto con el titulo del carro
         JOptionPane.showMessageDialog(null, optionnPane, mapaHashEnlazado.get(2022), 0);
-       
         
         
+        
+        JOptionPane.showMessageDialog(null, "A partir de aqui las operaciones seran mostradas por consola");
+         */
+        Carro Mazda = new Carro("Mazda 1", "AGB-982", "Blanco");
+        Carro Corvette = new Carro("Corvette C5", "LKH-026", "Rojo");
+        Carro Camaro = new Carro("Camaro z28", "MPZ-003", "Verde");
+        Carro Porsche = new Carro("Porsche 911 GT3 rs", "RRQ-887", "Gris");
+        Carro Tahoez = new Carro("Tahoe z71", "ONE-123", "Negro");
 
+        System.out.println("---LinkedList---");
+        //Se crea una lista enlazada de la interface List
+        List<Carro> listaEnlazada2 = new LinkedList<>();
+        //Se agregan elementos
+        listaEnlazada2.add(Mazda);
+        listaEnlazada2.add(Camaro);
+        listaEnlazada2.add(Porsche);
+        listaEnlazada2.add(Tahoez);
+        listaEnlazada2.add(Corvette);
+
+        //Buscar una manera de imprimir la lista
+        System.out.println("El carro en laprimera posicion es: " + listaEnlazada2.getFirst().getModelo());//Se busca en elemento en la primera posicion
+        listaEnlazada2.remove(Porsche);//Se elimina el objeto
+        System.out.println("Existe el carro Porsche en la lista?: " + listaEnlazada2.contains(Porsche));//Se vreifica si el Objeto esta en la lista
+
+        System.out.println();
+        System.out.println("---SortedSet---");
+        //Se crea un HashSet de la interface Set
+        HashSet<Carro> tablaSett = new HashSet<>();
+        //Se agregan los elementos
+        tablaSett.add(Mazda);
+        tablaSett.add(Camaro);
+        tablaSett.add(Porsche);
+        tablaSett.add(Tahoez);
+        tablaSett.add(Corvette);
+        
+        
+        
+        
+        
     }
 
 }
