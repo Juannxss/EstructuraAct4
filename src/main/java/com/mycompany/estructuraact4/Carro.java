@@ -2,10 +2,14 @@ package com.mycompany.estructuraact4;
 
 
 
-public class Carro  {
+public class Carro {
     private String modelo;
     private String placa;
     private String color;
+    
+    public Carro(){
+        
+    }
     
 
     public Carro(String modelo, String placa, String color) {
@@ -37,9 +41,13 @@ public class Carro  {
     public void setColor(String color) {
         this.color = color;
     }
+
+  
+    
     
     
     
     
     
 }
+
