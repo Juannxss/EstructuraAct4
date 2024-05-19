@@ -99,7 +99,7 @@ public class EstructuraAct4 {
 
         JOptionPane.showMessageDialog(null, "Los paises son: " + listaArreglo + "\n" //Se imprime la lista
                 + "El total de paises que conformaron la OTAN hasta el 2000 fueron: " + listaArreglo.size() + "\n"//Se muestra el tamaño
-                + "El pais " + listaArreglo.set(0, "COLOMBIA") + " sera reemplazado por " + listaArreglo.getFirst());//Se reemplaza y se trae el primer elemento
+                + "El pais " + listaArreglo.set(0, "COLOMBIA") + " sera reemplazado por " + listaArreglo.get(0));//Se reemplaza y se trae el primer elemento
 
         JOptionPane.showMessageDialog(null, "---Onceavo ejemplo Clase LinkedList---\n"
                 + "Crea una lista para almacenar los ultimos 7 ganadores del balon de oro\n "
@@ -152,8 +152,8 @@ public class EstructuraAct4 {
         arbolSett.addAll(vectorr);
 
         JOptionPane.showMessageDialog(null, "Los elementos de la coleccion son: " + arbolSett + "\n"
-                + "El elemento en la primera posicion es: " + arbolSett.getFirst() + "\n"
-                + "El elemento en la ultima posicion es: " + arbolSett.getLast());
+                + "El elemento en la primera posicion es: " + arbolSett.first() + "\n"
+                + "El elemento en la ultima posicion es: " + arbolSett.last());
 
         JOptionPane.showMessageDialog(null, "---Decimoséptimo ejemplo Clase HashMap---\n"
                 + " Crear un algoritmo para guardar el calibre el arma y devuelva el nombre de esta\n "
@@ -273,7 +273,7 @@ public class EstructuraAct4 {
 
         System.out.println();
         //Buscar una manera de imprimir la lista
-        System.out.println("El carro en la primera posicion es: " + listaEnlazada2.getFirst().getModelo());//Se busca en elemento en la primera posicion
+        System.out.println("El carro en la primera posicion es: " + listaEnlazada2.get(0).getModelo());//Se busca en elemento en la primera posicion
         System.out.println("Se eliminara el Porsche");
         listaEnlazada2.remove(Porsche);//Se elimina el objeto
         System.out.println("Existe el carro Porsche en la lista?: " + listaEnlazada2.contains(Porsche));//Se vreifica si el Objeto esta en la lista
